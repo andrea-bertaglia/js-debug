@@ -9,10 +9,13 @@
 
 *******************************************************************************/
 
-
 // ESERCIZIO 1
-for (let i = 0; i > 5; i++) {
-    console.log(i);
+// for (let i = 0; i > 5; i++) {
+//     console.log(i);
+// }
+
+for (let i = 0; i < 5; i++) {
+  console.log("es.1", i);
 }
 
 // * 1- Che cosa fa questo codice?
@@ -22,29 +25,44 @@ for (let i = 0; i > 5; i++) {
 // * 3- Sono presenti errori logici?
 // c'è un errore di logica (tranne che quando i = 0,1,2,3,4 la condizione i > 5 sarà sempre vera con let i = 0)
 
-
 // ESERCIZIO 2
+// function addIfEven(num) {
+//     if (num % 2 = 0) {
+//         return num + 5;
+//     }
+//     return num;
+// }
+
 function addIfEven(num) {
-    if (num % 2 = 0) {
-        return num + 5;
-    }
-    return num;
+  if (num % 2 === 0) {
+    return num + 5;
+  }
+  return num;
 }
+
+console.log("es.2", addIfEven(4));
 
 // * 1- Che cosa fa questo codice?
 // la funzione dovrebbe ritornare un numero addizionato di 5, se il numero originario è pari
 // * 2- Sono presenti errori di sintassi?
-// si in quanto viene usato = per la verifica, ma non è possibile in quanto = è un operatore di assegnazione 
+// si in quanto viene usato = per la verifica, ma non è possibile in quanto = è un operatore di assegnazione
 // * 3- Sono presenti errori logici?
 // se l'intenzione è ritornare un numero SOLO se è pari, non ci dovrebbe essere l'ultima riga in quanto ritorna il numero di partenza anche nel caso in cui sia dispari
 
-
 // ESERCIZIO 3
+// function loopToFive() {
+//     for (let i = 0, i < 5, i++) {
+//         console.log(i);
+//     }
+// }
+
 function loopToFive() {
-    for (let i = 0, i < 5, i++) {
-        console.log(i);
-    }
+  for (let i = 0; i < 5; i++) {
+    console.log("es.3", i);
+  }
 }
+
+loopToFive();
 
 // * 1- Che cosa fa questo codice?
 // la funzione dovrebbe stampare in console tutti i numeri compresi tra 0 e 4, tramite un ciclo for
@@ -53,19 +71,30 @@ function loopToFive() {
 // * 3- Sono presenti errori logici?
 // no (se l'intenzione è arrivare a 5, allora in questo caso c'è un errore perchè andrebbe messo <=)
 
-
 // ESERCIZIO 4 (suggerimento: ci sono 7 errori)
+// function displayEvenNumbers() {
+//     let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+//     let evenNumbers = [];
+//     for (let i = 0; i < numbers.length - 1; i++;) {
+//         if (numbers % 2 = 0); {
+//             evenNumbers.push(i);
+//         }
+//         return evenNumbers;
+//     }
+// }
+// displayEvenNumbers(); // dovrebbe restituire [2,4,6,8]
+
 function displayEvenNumbers() {
-    let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-    let evenNumbers = [];
-    for (let i = 0; i < numbers.length - 1; i++;) {
-        if (numbers % 2 = 0); {
-            evenNumbers.push(i);
-        }
-        return evenNumbers;
+  let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+  let evenNumbers = [];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+      evenNumbers.push(numbers[i]);
     }
+  }
+  return evenNumbers;
 }
-displayEvenNumbers(); // dovrebbe restituire [2,4,6,8]
+console.log("es.4", displayEvenNumbers());
 
 // * 1- Che cosa fa questo codice?
 // la funzione ritorna i numeri pari dell'array numbers
